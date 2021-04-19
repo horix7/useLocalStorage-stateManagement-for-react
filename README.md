@@ -15,12 +15,11 @@ npm install --save local-state
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'local-state'
-import 'local-state/dist/index.css'
+import { UseLocalState, Observer} from 'local-state'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <Observer />
   }
 }
 ```
