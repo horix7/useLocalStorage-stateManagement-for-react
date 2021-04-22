@@ -1,10 +1,28 @@
 import React from 'react'
 
-import { ExampleComponent } from 'local-state'
+import { Observer } from 'local-state'
 import 'local-state/dist/index.css'
 
+
+const TestComponent = (props: any) => (<> {console.log(props.doSomething())} </>)
+
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <>
+    <Observer> 
+
+       {(doSomething: any) => {
+         return (
+         <div>
+           <TestComponent doSomething={doSomething} />
+           
+         </div>
+         )
+       }}
+    </Observer>
+    </>
+
+  )
 }
 
 export default App
