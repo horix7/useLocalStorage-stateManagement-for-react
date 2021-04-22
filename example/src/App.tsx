@@ -4,10 +4,10 @@ import TestComp from "./components/testBox";
 
 const TestComponent = (props: any) => (<> 
   <br/>
-  <input type="text" onChange={(event: any) => props.doSomething.setGlobals("input1", event.target.value)}/>
+  <input type="text" value={props.state.input1} onChange={(event: any) => props.doSomething.setGlobals("input1", event.target.value)}/>
   <br/>
   <br/>
-  <input type="text" onChange={(event: any) => props.doSomething.setGlobals("input2", event.target.value)}/>
+  <input type="text"  value={props.state.input2} onChange={(event: any) => props.doSomething.setGlobals("input2", event.target.value)}/>
   <br/>
   <br/>
 

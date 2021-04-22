@@ -12,7 +12,8 @@ export default function TestBox  ( ) {
                                 --------------------------------
                                 <br/>
                                 {state.input1}
-                                
+                                  <p>{JSON.stringify(state)}</p>
+
                                 now who us 
                             </div>
                         )
