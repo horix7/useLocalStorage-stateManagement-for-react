@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Observer } from 'local-state'
 import 'local-state/dist/index.css'
 

@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import  Local from "../functions/convertingLocalStorage";
+
 
 export default class Oberservor extends Component<any> {
 
@@ -6,8 +8,21 @@ export default class Oberservor extends Component<any> {
         
     }
 
-    updateGlobalChange = () => {
-        console.log("achieved")
+    componentDidMount() {
+       
+        const savedState = Local.convertAny("state")
+        this.setState(savedState)
+    }
+
+    updateGlobalChange = (name: string, data: any) => {
+       
+       this.setState({...this.state ,[name]: data})
+       Local.saveItem(this.state, "state")
+
+    }
+
+    getGlobalState = (name: string) => {
+        return 
     }
 
     render() {

@@ -21,3 +21,5 @@ class ConvertingLocalToObject {
         }
     }
 }
+
+export default new ConvertingLocalToObject
