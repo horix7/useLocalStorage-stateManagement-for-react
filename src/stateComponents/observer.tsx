@@ -22,7 +22,6 @@ export default class Oberservor extends Component<any> {
     }
 
     properties = {
-        state: this.state,
         setGlobals: this.updateGlobalChange
     }
 

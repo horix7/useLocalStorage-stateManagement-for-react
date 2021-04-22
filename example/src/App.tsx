@@ -1,5 +1,6 @@
 import React from 'react'
 import { Observer } from "local-state";
+import TestComp from "./components/testBox";
 
 const TestComponent = (props: any) => (<> 
   <br/>
@@ -13,6 +14,8 @@ const TestComponent = (props: any) => (<>
   <button onClick={() => {
     alert(JSON.stringify(props.state))
   }}>click to view the current state</button>
+
+  <p>{JSON.stringify(props.state)}</p>
  </>)
 
 const App = () => {
@@ -23,6 +26,7 @@ const App = () => {
          return (
          <div>
            <TestComponent doSomething={doSomething}  state={state} />
+           <TestComp />
          </div>
          )
        }}
