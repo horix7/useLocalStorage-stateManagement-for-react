@@ -1,5 +1,4 @@
 
-
 class ConvertingLocalToObject {
 
     public convertAny = (item: string) => {
@@ -21,3 +20,5 @@ class ConvertingLocalToObject {
         }
     }
 }
+
+export default  new ConvertingLocalToObject
