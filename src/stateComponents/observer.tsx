@@ -5,7 +5,7 @@ import  Local from "../functions/convertingLocalStorage";
 export default class Oberservor extends Component<any> {
 
     state = {
-        
+         
     }
 
     componentDidMount() {
@@ -21,15 +21,16 @@ export default class Oberservor extends Component<any> {
 
     }
 
-    getGlobalState = (name: string) => {
-        return 
+    properties = {
+        state: this.state,
+        setGlobals: this.updateGlobalChange
     }
 
     render() {
 
         return (
             <Fragment>
-                { typeof this.props.children === "function" ? this.props.children(this.updateGlobalChange) : null }
+                { typeof this.props.children === "function" ? this.props.children(this.properties) : null }
             </Fragment>
         )
     }

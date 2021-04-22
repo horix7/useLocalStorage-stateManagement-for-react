@@ -1,9 +1,7 @@
 import React from 'react'
-import { Observer } from 'local-state'
-import 'local-state/dist/index.css'
+import { Observer } from "local-state";
 
-
-const TestComponent = (props: any) => (<> {console.log(props.doSomething())} </>)
+const TestComponent = (props: any) => (<> {console.log(props.doSomething)} </>)
 
 const App = () => {
   return (
