@@ -30,7 +30,7 @@ export default class Oberservor extends Component<any> {
 
         return (
             <Fragment>
-                { typeof this.props.children === "function" ? this.props.children(this.properties) : null }
+                { typeof this.props.children === "function" ? this.props.children(this.properties, this.state) : null }
             </Fragment>
         )
     }
